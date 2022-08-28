@@ -34,3 +34,8 @@ function concluir(){
     const tarefaSelecionada = document.querySelector("#lista")
     tarefaSelecionada.className = "concluida"
 }
+
+function excluir(){
+    const tarefaSelecionada = document.querySelector("#lista")
+    tarefaSelecionada.remove()= "x"
+}
