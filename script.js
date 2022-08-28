@@ -1,3 +1,4 @@
+let idTarefa = 0
 const inputTarefa = document.getElementById("tarefa-nova")
 
 function adicionarTarefa(){
@@ -12,6 +13,9 @@ function adicionarTarefa(){
     lista.appendChild(item)
 
     inputTarefa.value = ""
+
+    idTarefa++
+    item.id = idTarefa
 }
 
 const botaoAdicionar = document.querySelector("#btn-adicionar")
@@ -25,3 +29,12 @@ function limparlista(){
 
 const botaoLimpar = document.querySelector(".bt-azul")
 botaoLimpar.addEventListener("click", limparlista)
+
+function concluir(itemId){
+    const tarefaSelecionada = document.querySelector("itemId")
+    tarefaSelecionada.className = "concluida"
+
+    item.innerHTML =`
+    <span onclick= "concluir (${idTarefa})">${inputTarefa.value}</span>
+    <button class="excluir" onclick="excluir(event)">x</button>`
+}
