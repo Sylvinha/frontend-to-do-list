@@ -5,8 +5,8 @@ function adicionarTarefa(){
     const item = document.createElement("li")
 
     item.innerHTML = `<li>
-    <span>${inputTarefa.value}</span>
-    <button class="excluir">x</button>
+    <span onclick="concluir(${idTarefa})">${inputTarefa.value}</span>
+    <button class="excluir" onclick="excluir(event)">x</button>
 </li>`
 
     const lista = document.querySelector("#lista")
@@ -30,11 +30,7 @@ function limparlista(){
 const botaoLimpar = document.querySelector(".bt-azul")
 botaoLimpar.addEventListener("click", limparlista)
 
-function concluir(itemId){
-    const tarefaSelecionada = document.querySelector("itemId")
+function concluir(){
+    const tarefaSelecionada = document.querySelector("#lista")
     tarefaSelecionada.className = "concluida"
-
-    item.innerHTML =`
-    <span onclick= "concluir (${idTarefa})">${inputTarefa.value}</span>
-    <button class="excluir" onclick="excluir(event)">x</button>`
 }
